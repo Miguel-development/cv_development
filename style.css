@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: rgba(253, 253, 253, 0.988);
+  color: rgba(253, 253, 253, 0.988);
+  height: 100vh;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html body {
+  padding: 0;
+  background-color: rgba(253, 253, 253, 0.988);
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (3)[1fr];
+      grid-template-columns: repeat(1fr, 3);
+}
+
+html body header {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  background-color: rgba(253, 253, 253, 0.988);
+  position: fixed;
+  top: 90vh;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+html body header div#logo-desplegable {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+}
+
+html body header div#logo-desplegable div:nth-child(1) {
+  width: 60%;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+html body header div#logo-desplegable div:nth-child(2) {
+  width: 40%;
+  text-align: center;
+  margin: 1vh;
+  padding: 1vh;
+}
+
+html body header div#logo-desplegable div:nth-child(2) i {
+  font-size: 6vh;
+  overflow: hidden;
+}
+
+html body header div#div-nav {
+  -webkit-transition: top 0.4s cubic-bezier(0.175, 0.582, 0.765, 1);
+  transition: top 0.4s cubic-bezier(0.175, 0.582, 0.765, 1);
+  position: relative;
+  z-index: -1;
+  top: 80vh;
+  width: 100%;
+}
+
+html body header div#div-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body header div#div-nav ul li {
+  width: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body header div#div-nav ul li a {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  background-color: rgba(55, 3, 3, 0.953);
+  text-decoration: none;
+  padding: 3vh;
+  font-size: 4vh;
+  color: whitesmoke;
+}
+
+html body header div#div-nav ul li a:hover {
+  background-color: rgba(10, 10, 10, 0.95);
+}
+
+html body main {
+  background-color: rgba(253, 253, 253, 0.988);
+  color: rgba(0, 0, 0, 0.922);
+}
+
+html body main h1 {
+  text-align: center;
+  margin: 3vw;
+}
+
+html body main section {
+  margin: 0.5em;
+  background-color: rgba(253, 253, 253, 0.988);
+  color: rgba(0, 0, 0, 0.922);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body main section h2 {
+  text-align: center;
+}
+
+html body main section article {
+  text-align: justify;
+  padding: 0.5em;
+  font-size: 5vw;
+}
+
+html body main section:target {
+  background-color: rgba(250, 250, 250, 0.788);
+  color: rgba(2, 2, 2, 0.904);
+}
+
+html body main section:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main section:nth-child(2) img {
+  width: 50%;
+  margin-bottom: 5vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding-top: 10vh;
+  height: 100%;
+  margin-bottom: 20vh;
+  background-color: rgba(0, 0, 0, 0.922);
+  color: white;
+}
+
+@media screen and (min-width: 48em) {
+  html body {
+    -ms-grid-columns: 10vw 80vw 10vw;
+        grid-template-columns: 10vw 80vw 10vw;
+  }
+  html body header {
+    top: 0vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: inherit;
+  }
+  html body header div#logo-desplegable div:nth-child(1) {
+    font-size: 1.5vw;
+  }
+  html body header div#logo-desplegable #menu-desplegable {
+    display: none;
+  }
+  html body header div#div-nav {
+    -webkit-transition: all 0.4s cubic-bezier(0.175, 0.582, 0.765, 1);
+    transition: all 0.4s cubic-bezier(0.175, 0.582, 0.765, 1);
+    position: initial;
+  }
+  html body header div#div-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  html body header div#div-nav ul li {
+    width: 100%;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body header div#div-nav ul li a {
+    padding: 2vh;
+    font-size: 2vw;
+    -webkit-box-shadow: 0 -0.3em rgba(136, 53, 5, 0.774) inset;
+            box-shadow: 0 -0.3em rgba(136, 53, 5, 0.774) inset;
+  }
+  html body main {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    padding-top: 10vw;
+  }
+  html body main h1 {
+    font-size: 2vw;
+  }
+  html body main section h2 {
+    font-size: 2vw;
+  }
+  html body main section article {
+    font-size: 1.5vw;
+  }
+  html body main section:nth-child(2) img {
+    width: 25%;
+  }
+  html body footer {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1vh;
+    margin-bottom: 0vh;
+  }
+  html body footer p {
+    font-size: 2vh;
+  }
+}
+
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  html body {
+    -ms-grid-columns: 10vw 80vw 10vw;
+        grid-template-columns: 10vw 80vw 10vw;
+  }
+  html body header {
+    top: 0vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: inherit;
+  }
+  html body header div#logo-desplegable div:nth-child(1) {
+    font-size: 1.5vw;
+  }
+  html body header div#logo-desplegable #menu-desplegable {
+    display: none;
+  }
+  html body header div#div-nav {
+    -webkit-transition: all 0.4s cubic-bezier(0.175, 0.582, 0.765, 1);
+    transition: all 0.4s cubic-bezier(0.175, 0.582, 0.765, 1);
+    position: initial;
+  }
+  html body header div#div-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  html body header div#div-nav ul li {
+    width: 100%;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body header div#div-nav ul li a {
+    padding: 2vh;
+    font-size: 2vw;
+    -webkit-box-shadow: 0 -0.3em rgba(136, 53, 5, 0.774) inset;
+            box-shadow: 0 -0.3em rgba(136, 53, 5, 0.774) inset;
+  }
+  html body main {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    padding-top: 10vw;
+  }
+  html body main h1 {
+    font-size: 2vw;
+  }
+  html body main section h2 {
+    font-size: 2vw;
+  }
+  html body main section article {
+    font-size: 1.5vw;
+  }
+  html body main section:nth-child(2) img {
+    width: 25%;
+  }
+  html body footer {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1vh;
+    margin-bottom: 0vh;
+  }
+  html body footer p {
+    font-size: 2vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
